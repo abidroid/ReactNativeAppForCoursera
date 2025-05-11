@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { View } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
-const WelcomeScreen = ({ navigation }) => {
-  // Add welcome screen code here.
-  return <View>
 
-    <Image
+function WelcomeScreen({navigation}) {
+  return (<View style={styles.container}>
 
+    <Image 
+    style={styles.logo}
+    source={require('../assets/little-lemon-logo.png')}
     />
 
     <Text>
@@ -16,7 +16,25 @@ const WelcomeScreen = ({ navigation }) => {
     <Text>
       NewsLetter
     </Text>
-  </View>;
+  </View>);
 };
 
 export default WelcomeScreen;
+
+const styles = StyleSheet.create({
+
+    container: {
+        flex: 1,
+        justifyContent: 'space-between',
+        paddingVertical: 48,
+        paddingHorizontal: 24,
+        alignItems: 'center'
+    },
+    logo: {
+        width: 200,
+        height: 200,
+        
+    },
+
+
+});
