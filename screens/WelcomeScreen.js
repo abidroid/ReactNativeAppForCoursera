@@ -14,7 +14,7 @@ function WelcomeScreen({ navigation }) {
         </Text>
 
         <Pressable style={styles.button}
-        onPress={()=> {navigation.navigate('Subscribe')}}
+            onPress={() => { navigation.navigate('Subscribe') }}
         >
 
             <Text style={styles.buttonText}>
@@ -46,10 +46,11 @@ const styles = StyleSheet.create({
 
     introText: {
         fontWeight: 'bold',
-        fontSize: 24,
-        textAlign: 'center'
-
+        fontSize: 20,
+        textAlign: 'center',
+        color: '#7C7C7C'
     },
+    
     buttonText: {
         color: 'white'
     },
