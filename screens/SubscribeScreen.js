@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, Pressable, TextInput } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, TextInput, Alert } from 'react-native';
 
 
 const SubscribeScreen = () => {
@@ -23,7 +23,8 @@ const SubscribeScreen = () => {
 
     />
     <Pressable style={[styles.button, !email && styles.disabledButton]}
-      onPress={ onChangeEmail}
+      onPress={ ()=> {Alert.alert('Thanks for subscribing,\nstay tuned')}}
+      disabled={!email}
     >
 
       <Text style={styles.buttonText}>
