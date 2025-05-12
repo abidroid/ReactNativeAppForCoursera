@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { View, Text, Image, StyleSheet, Pressable, TextInput } from 'react-native';
 
 
@@ -13,11 +12,18 @@ const SubscribeScreen = () => {
       Subscribe to our newsletter for our latest delicious recipes!
     </Text>
 
-    <TextInput 
-    placeholder='Type your email'
+    <TextInput style={styles.input}
+      placeholder='Type your email'
 
     />
+    <Pressable style={styles.button}
+      onPress={() => { }}
+    >
 
+      <Text style={styles.buttonText}>
+        Newsletter
+      </Text>
+    </Pressable>
   </View>);
 };
 
@@ -30,12 +36,12 @@ const styles = StyleSheet.create({
     paddingVertical: 24,
     paddingHorizontal: 24,
     alignItems: 'center',
-    gap: 16,
+    gap: 24,
   },
 
   logo: {
-    width: 164,
-    height: 164,
+    width: 124,
+    height: 124,
     resizeMode: 'contain',
   },
 
@@ -50,7 +56,9 @@ const styles = StyleSheet.create({
   input: {
     borderRadius: 8,
     borderColor: 'black',
-    width: '100%'
+    width: '100%',
+    borderWidth: 1,
+    padding: 8,
   },
 
 
