@@ -35,22 +35,30 @@ const styles = StyleSheet.create({
         paddingVertical: 48,
         paddingHorizontal: 24,
         alignItems: 'center',
-        gap: 72,
+        gap: 124,
     },
+
     logo: {
         width: 200,
         height: 200,
+        resizeMode: 'contain',
     },
 
+    introText: {
+
+
+    },
     buttonText: {
         color: 'white'
     },
+
     button: {
         backgroundColor: 'green',
         padding: 8,
         textAlign: 'center',
         borderRadius: 8,
-    
+        width: '100%',
+        alignItems: 'center'
     }
 
 
