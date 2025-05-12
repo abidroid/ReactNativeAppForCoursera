@@ -9,7 +9,7 @@ function WelcomeScreen({ navigation }) {
             source={require('../assets/little-lemon-logo.png')}
         />
 
-        <Text>
+        <Text style={styles.introText}>
             Little Lemon, your local Mediterranean Bistro
         </Text>
 
@@ -45,7 +45,9 @@ const styles = StyleSheet.create({
     },
 
     introText: {
-
+        fontWeight: 'bold',
+        fontSize: 24,
+        textAlign: 'center'
 
     },
     buttonText: {
