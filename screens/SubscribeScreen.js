@@ -1,7 +1,11 @@
+import React from 'react';
 import { View, Text, Image, StyleSheet, Pressable, TextInput } from 'react-native';
 
 
 const SubscribeScreen = () => {
+
+  const [email, onChangeEmail] = React.useState('');
+
   // Add subscribe screen code here
   return (<View style={styles.container}>
     <Image style={styles.logo}
@@ -14,10 +18,12 @@ const SubscribeScreen = () => {
 
     <TextInput style={styles.input}
       placeholder='Type your email'
+      onChangeText={text => onChangeEmail(text)}
+      value={email}
 
     />
-    <Pressable style={styles.button}
-      onPress={() => { }}
+    <Pressable style={[styles.button, !email && styles.disabledButton]}
+      onPress={ onChangeEmail}
     >
 
       <Text style={styles.buttonText}>
@@ -73,7 +79,9 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     width: '100%',
     alignItems: 'center'
-  }
-
+  },
+  disabledButton: {
+  backgroundColor: 'gray',
+},
 
 });
